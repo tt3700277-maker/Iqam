@@ -6,10 +6,15 @@
 <title>Iqama Card – 100% Perfect Final</title>
 
 <style>
+/* তোমার ফোল্ডারে থাকা ফন্টটি এখানে লোড করা হয়েছে */
+@font-face {
+    font-family: 'SakkalCustom';
+    src: url('ArbFONTS-majalla.ttf') format('truetype');
+}
+
 /* আরবি ফন্টের জন্য গুগল ফন্ট ব্যবহার করা হয়েছে যা আকামার ফন্টের সাথে সামঞ্জস্যপূর্ণ */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;800&display=swap');
-/* আকামার ফন্টের সাথে সবথেকে বেশি সামঞ্জস্যপূর্ণ ফন্ট 'Amiri' ইমপোর্ট করা হলো */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
 
 body {
     margin: 0;
@@ -67,13 +72,13 @@ body {
     color: #000;
 }
 
-/* ভ্যালু (যা ঘন হবে) */
+/* ভ্যালু (যা ঘন হবে) - এখানে তোমার কাস্টম ফন্ট দেওয়া হয়েছে */
 .value { 
     font-weight: 800;
     margin-right: 8px; 
     font-size: 16px; 
     color: #1a1a1a;
-    font-family: "Traditional Arabic", "Amiri", serif;
+    font-family: 'SakkalCustom', serif;
 }
 
 /* লেবেল (যা হালকা হবে) */
@@ -90,12 +95,12 @@ body {
     font-size: 22px; 
     font-weight: 800;
     color: #1a1a1a;
-    font-family: "Traditional Arabic", "Amiri", serif;
+    font-family: 'SakkalCustom', serif;
     direction: ltr;
 }
 
 /* নাম সেকশন */
-.f-name-ar { top: 24%; right: 4%; font-size: 22px; font-family: "Traditional Arabic", "Amiri", serif; font-weight: 800; color: #000; }
+.f-name-ar { top: 24%; right: 4%; font-size: 22px; font-family: 'SakkalCustom', serif; font-weight: 800; color: #000; }
 .f-name-en { top: 34%; right: 4%; font-size: 18px; font-weight: 700; font-family: 'Arial', sans-serif; direction: ltr; color: #1a1a1a; }
 
 /* পজিশন গ্রুপ */
