@@ -6,13 +6,19 @@
 <title>Iqama Card – 100% Perfect Final</title>
 
 <style>
-/* তোমার ফোল্ডারে থাকা ফন্টটি এখানে লোড করা হয়েছে */
+/* ১. ঘন ফন্ট (ভ্যালু ও নামের জন্য) */
 @font-face {
     font-family: 'SakkalCustom';
     src: url('ArbFONTS-majalla.ttf') format('truetype');
 }
 
-/* আরবি ফন্টের জন্য গুগল ফন্ট ব্যবহার করা হয়েছে যা আকামার ফন্টের সাথে সামঞ্জস্যপূর্ণ */
+/* ২. হালকা ফন্ট (লেবেলের জন্য - তোমার নতুন ফাইল) */
+@font-face {
+    font-family: 'DinNextCustom';
+    src: url('DINNextLTArabic-Regular-3.ttf') format('truetype');
+}
+
+/* আরবি ফন্টের জন্য গুগল ফন্ট ব্যবহার করা হয়েছে */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;800&display=swap');
 
 
@@ -43,7 +49,7 @@ body {
     width: 720px;
     height: 440px;
     margin: auto;
-    background-image: url('iqama-bg.jpg'); /* আপনার ব্যাকগ্রাউন্ড ইমেজের নাম নিশ্চিত করুন */
+    background-image: url('iqama-bg.jpg'); 
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -72,7 +78,7 @@ body {
     color: #000;
 }
 
-/* ভ্যালু (যা ঘন হবে) - এখানে তোমার কাস্টম ফন্ট দেওয়া হয়েছে */
+/* ভ্যালু (যা ঘন হবে) - SakkalCustom ব্যবহার করা হয়েছে */
 .value { 
     font-weight: 800;
     margin-right: 8px; 
@@ -81,17 +87,18 @@ body {
     font-family: 'SakkalCustom', serif;
 }
 
-/* লেবেল (যা হালকা হবে) */
+/* লেবেল (যা হালকা হবে) - তোমার নতুন DIN ফন্ট সেট করা হয়েছে */
 .label { 
-    font-weight: 600; 
+    font-weight: normal; 
     color: #555; 
     font-size: 15px;
+    font-family: 'DinNextCustom', sans-serif;
 }
 
-/* নতুন সংযোজন: সংস্করণ নম্বর (Version Number) */
+/* সংস্করণ নম্বর */
 .f-version-num {
-    top: 14.2%; /* رقم النسخة এর ঠিক নিচে */
-    left: 10.5%; /* বাম দিক থেকে সঠিক পজিশন */
+    top: 14.2%; 
+    left: 10.5%; 
     font-size: 22px; 
     font-weight: 800;
     color: #1a1a1a;
@@ -101,7 +108,7 @@ body {
 
 /* নাম সেকশন */
 .f-name-ar { top: 24%; right: 4%; font-size: 22px; font-family: 'SakkalCustom', serif; font-weight: 800; color: #000; }
-.f-name-en { top: 34%; right: 4%; font-size: 18px; font-weight: 700; font-family: 'Arial', sans-serif; direction: ltr; color: #1a1a1a; }
+.f-name-en { top: 34%; right: 4%; font-size: 18px; font-weight: 400; font-family: 'Arial', sans-serif; direction: ltr; color: #1a1a1a; }
 
 /* পজিশন গ্রুপ */
 .right-group { right: 4%; width: 330px; }
@@ -138,9 +145,7 @@ button {
 <div class="form-container">
     <input type="text" id="in_name_ar" class="full-width" placeholder="নাম (আরবি)">
     <input type="text" id="in_name_en" class="full-width" placeholder="Name (English)">
-    
     <input type="text" id="in_version_num" placeholder="সংস্করণ নম্বর (যেমন: ১)">
-    
     <input type="text" id="in_id" placeholder="ইকামা নম্বর">
     <input type="text" id="in_expiry" placeholder="শেষ তারিখ">
     <input type="text" id="in_dob" placeholder="জন্ম তারিখ">
